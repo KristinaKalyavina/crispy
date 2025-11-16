@@ -1,0 +1,1018 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-beige: #F5F1EB;
+    --color-cream: #FAF8F3;
+    --color-pink: #F8E8E8;
+    --color-light-brown: #E8D5C4;
+    --color-brown: #D4C4B0;
+    --color-dark: #5A4A3A;
+    --color-text: #4A4A4A;
+    --color-white: #FFFFFF;
+    --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-cream);
+    color: var(--color-text);
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: manipulation;
+}
+
+/* Шапка */
+.header {
+    background: linear-gradient(135deg, var(--color-beige) 0%, var(--color-pink) 100%);
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.header-banner {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    font-weight: 300;
+}
+
+/* Навигационные карточки категорий */
+.category-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.category-card {
+    background: var(--color-white);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+.category-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.category-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+}
+
+.category-card p {
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+/* Основной контент */
+.main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem 2rem;
+}
+
+.section {
+    background: var(--color-white);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--color-dark);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-light-brown);
+}
+
+/* Блок расписания и задач */
+.schedule-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.schedule-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.task-form {
+    background: var(--color-beige);
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.task-form h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+}
+
+.tasks-table-container {
+    overflow-x: auto;
+}
+
+.tasks-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.tasks-table th,
+.tasks-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-beige);
+}
+
+.tasks-table th {
+    background: var(--color-light-brown);
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+.tasks-table tr:hover {
+    background: var(--color-cream);
+}
+
+.schedule-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.main-tasks-widget {
+    background: var(--color-pink);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.main-tasks-widget h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+
+.main-tasks-list {
+    list-style: none;
+}
+
+.main-tasks-list li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quote-card {
+    background: var(--color-beige);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--color-light-brown);
+}
+
+.quote-text {
+    font-style: italic;
+    color: var(--color-text);
+    font-size: 1rem;
+}
+
+/* Секция продуктивности */
+.productivity-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.habits-block h3,
+.priorities-block h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+
+.habits-table-container {
+    overflow-x: auto;
+}
+
+.habits-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.habits-table th,
+.habits-table td {
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid var(--color-beige);
+}
+
+.habits-table th {
+    background: var(--color-light-brown);
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+.habits-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+}
+
+.habit-check {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.priority-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--color-beige);
+    border-radius: 8px;
+}
+
+.priorities-list {
+    list-style: none;
+}
+
+.priorities-list li {
+    background: var(--color-cream);
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-light-brown);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.priority-high {
+    border-left-color: #E74C3C;
+}
+
+.priority-medium {
+    border-left-color: #F39C12;
+}
+
+.priority-low {
+    border-left-color: #27AE60;
+}
+
+/* Секция мышления */
+.mindset-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.journal-block h3,
+.affirmations-block h3,
+.progress-block h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+
+.journal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.journal-form label {
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.affirmations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.affirmation-card {
+    background: var(--color-pink);
+    padding: 1.25rem;
+    border-radius: 8px;
+    font-style: italic;
+    color: var(--color-text);
+    border-left: 4px solid var(--color-light-brown);
+}
+
+.affirmation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.progress-widget {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.progress-widget label {
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.range-input {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: var(--color-beige);
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--color-light-brown);
+    cursor: pointer;
+}
+
+.range-input::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--color-light-brown);
+    cursor: pointer;
+    border: none;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 24px;
+    background: var(--color-beige);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-pink) 0%, var(--color-light-brown) 100%);
+    border-radius: 12px;
+    transition: width 0.3s ease;
+    width: 50%;
+}
+
+.progress-value {
+    font-weight: 600;
+    color: var(--color-dark);
+    text-align: center;
+}
+
+/* Секция здоровья */
+.health-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.workout-tracker-block {
+    grid-row: span 2;
+}
+
+.workout-tracker-block h3,
+.workout-focus-block h3,
+.water-tracker-block h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+
+.workout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--color-beige);
+    border-radius: 8px;
+}
+
+.workout-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.workout-table th,
+.workout-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-beige);
+}
+
+.workout-table th {
+    background: var(--color-light-brown);
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+.focus-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.focus-card {
+    background: var(--color-cream);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.focus-card:hover {
+    background: var(--color-beige);
+}
+
+.focus-card input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.water-table-container {
+    background: var(--color-beige);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.water-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.water-table th,
+.water-table td {
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid var(--color-white);
+}
+
+.water-table th {
+    background: var(--color-light-brown);
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+.water-cell {
+    width: 30px;
+    height: 30px;
+    background: var(--color-white);
+    border: 1px solid var(--color-brown);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.water-cell.filled {
+    background: #87CEEB;
+    border-color: #5A9FD4;
+}
+
+.water-progress {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--color-white);
+}
+
+/* Секция жизни и досуга */
+.life-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.expenses-block {
+    grid-row: span 2;
+}
+
+.expenses-block h3,
+.wishlist-block h3,
+.trips-block h3,
+.outfits-block h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+
+.expense-form,
+.wishlist-form,
+.trip-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--color-beige);
+    border-radius: 8px;
+}
+
+.expenses-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.expenses-table th,
+.expenses-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-beige);
+}
+
+.expenses-table th {
+    background: var(--color-light-brown);
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+.expenses-total {
+    padding: 1rem;
+    background: var(--color-pink);
+    border-radius: 8px;
+    text-align: right;
+    font-size: 1.2rem;
+    color: var(--color-dark);
+}
+
+.wishlist-list {
+    list-style: none;
+}
+
+.wishlist-list li {
+    background: var(--color-cream);
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.wishlist-item-info {
+    flex: 1;
+}
+
+.trips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.trip-card {
+    background: var(--color-pink);
+    padding: 1.25rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-light-brown);
+}
+
+.trip-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+}
+
+.outfits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.outfit-card {
+    aspect-ratio: 1;
+    background: var(--color-beige);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--color-brown);
+}
+
+.outfit-placeholder {
+    color: var(--color-text);
+    font-size: 1rem;
+    opacity: 0.6;
+}
+
+/* Общие элементы форм */
+.input-field,
+.textarea-field {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-brown);
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    background: var(--color-white);
+    color: var(--color-text);
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus,
+.textarea-field:focus {
+    outline: none;
+    border-color: var(--color-light-brown);
+    box-shadow: 0 0 0 3px rgba(232, 213, 196, 0.2);
+}
+
+/* Предотвращение увеличения текста при фокусе на iOS */
+@media (max-width: 768px) {
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    input[type="number"],
+    select,
+    textarea {
+        font-size: 16px !important;
+    }
+}
+
+.textarea-field {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--color-light-brown);
+    color: var(--color-dark);
+}
+
+.btn-primary:hover {
+    background: var(--color-brown);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn-secondary {
+    background: var(--color-beige);
+    color: var(--color-text);
+    border: 1px solid var(--color-brown);
+}
+
+.btn-secondary:hover {
+    background: var(--color-cream);
+}
+
+.btn-delete {
+    background: #E74C3C;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-delete:hover {
+    background: #C0392B;
+}
+
+/* Футер */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--color-text);
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .schedule-grid,
+    .productivity-grid,
+    .mindset-grid,
+    .health-grid,
+    .life-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .workout-tracker-block,
+    .expenses-block {
+        grid-row: span 1;
+    }
+
+    .category-nav {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 1.5rem;
+    }
+
+    .category-nav {
+        grid-template-columns: 1fr;
+    }
+
+    .focus-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .outfits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tasks-table,
+    .habits-table,
+    .workout-table,
+    .expenses-table,
+    .water-table {
+        font-size: 0.75rem;
+    }
+
+    .tasks-table th,
+    .tasks-table td,
+    .habits-table th,
+    .habits-table td,
+    .workout-table th,
+    .workout-table td,
+    .expenses-table th,
+    .expenses-table td,
+    .water-table th,
+    .water-table td {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .section {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .header {
+        padding: 1rem 0.5rem;
+    }
+
+    .category-card {
+        padding: 1rem;
+    }
+
+    .category-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .category-icon {
+        font-size: 2rem;
+    }
+
+    /* Улучшенные сенсорные цели для мобильных */
+    .btn-primary,
+    .btn-secondary {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        min-height: 44px;
+    }
+
+    .input-field,
+    .textarea-field {
+        padding: 0.875rem;
+        font-size: 1rem;
+        min-height: 44px;
+    }
+
+    .habit-check,
+    .focus-check {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        min-height: 24px;
+    }
+
+    /* Улучшенная прокрутка таблиц */
+    .tasks-table-container,
+    .habits-table-container,
+    .workout-list-container,
+    .expenses-table-container,
+    .water-table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 -1rem;
+        padding: 0 1rem;
+    }
+
+    .tasks-table,
+    .habits-table,
+    .workout-table,
+    .expenses-table,
+    .water-table {
+        min-width: 600px;
+        font-size: 0.8rem;
+    }
+
+    /* Компактные формы на мобильных */
+    .task-form,
+    .priority-form,
+    .workout-form,
+    .expense-form,
+    .wishlist-form,
+    .trip-form {
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+
+    .task-form h3,
+    .habits-block h3,
+    .priorities-block h3,
+    .workout-tracker-block h3,
+    .workout-focus-block h3,
+    .water-tracker-block h3,
+    .expenses-block h3,
+    .wishlist-block h3,
+    .trips-block h3,
+    .outfits-block h3,
+    .journal-block h3,
+    .affirmations-block h3,
+    .progress-block h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Адаптивные отступы */
+    .main-content {
+        padding: 0 0.5rem 1rem;
+    }
+
+    .main-tasks-widget,
+    .quote-card,
+    .affirmation-card {
+        padding: 1rem;
+    }
+
+    .priorities-list li,
+    .wishlist-list li {
+        padding: 0.875rem;
+        flex-wrap: wrap;
+    }
+
+    .trip-card {
+        padding: 1rem;
+    }
+
+    .water-cell {
+        width: 35px;
+        height: 35px;
+        min-width: 35px;
+        min-height: 35px;
+    }
+}
+
+/* Дополнительные стили для очень маленьких экранов */
+@media (max-width: 360px) {
+    .main-title {
+        font-size: 1.3rem;
+    }
+
+    .subtitle {
+        font-size: 0.85rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .category-card {
+        padding: 0.875rem;
+    }
+
+    .tasks-table,
+    .habits-table,
+    .workout-table,
+    .expenses-table,
+    .water-table {
+        min-width: 500px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Ландшафтная ориентация на мобильных */
+@media (max-width: 768px) and (orientation: landscape) {
+    .header {
+        padding: 1rem 0.5rem;
+    }
+
+    .main-title {
+        font-size: 1.8rem;
+    }
+
+    .section {
+        padding: 1.25rem;
+    }
+}
+
+/* Улучшенная поддержка touch-событий */
+@media (hover: none) and (pointer: coarse) {
+    .category-card:active,
+    .btn-primary:active,
+    .btn-secondary:active {
+        transform: scale(0.98);
+    }
+
+    .category-card:hover {
+        transform: none;
+    }
+
+    .btn-primary:hover {
+        transform: none;
+    }
+}
+
